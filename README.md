@@ -17,6 +17,8 @@ When terraform successfully provisions, you should have AWS infra as below.
 
 <img src="./asset/Brocker_private_ecr_demo.png">
 
+**Note:** This demo only works in your local machine. Meaning, this demo won't work on Terraform cloud. This is because docker build occurs during the provisioning and it only works from local machine, not on Terraform cloud SaaS. 
+
 ## Prerequisite
 
 *  Terraform 
@@ -84,7 +86,12 @@ broker_token = "<replace this with your broker token>"
 ```
 terraform init
 terraform plan
-terraform apply -auto-apply
+```
+
+If not error, do actual provisioning.
+
+```
+terraform apply --auto-approve
 ```
 
 ### Confirm the integration works
@@ -110,7 +117,7 @@ terraform destroy -auto-approve
 
 ## Debug
 
-* If you want to log in to broker or cra (container registry agent) containers for debug purpose, do following:
+If you want to log in to broker or cra (container registry agent) containers for debug purpose, do following:
 
 **Note:** You need AWS CLI and Session manager plugin installed in your local machine.
   * AWS CLI
