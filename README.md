@@ -10,8 +10,8 @@ In terraform,
 * Create sample container image using Docker
 * Push the docker image to ECR
 * Create ECS cluster
-* Run Snyk broker container on Fargate
-* Run Snyk Container Registry Agent on Fargate
+* Run Snyk broker container on Fargate in private subnet
+* Run Snyk Container Registry Agent on Fargate in private subnet
 
 When terraform successfully provisions, you should have AWS infra as below.
 
@@ -133,5 +133,5 @@ terraform destroy -auto-approve
 
 ## Action Items
 
-[] Using ECS on EC2 version?
-[] Terraform cloud compatible versioin?
+* [ ] Using ECS on EC2 version?
+* [ ] Terraform cloud compatible versioin?
