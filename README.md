@@ -13,6 +13,8 @@ In terraform,
 * Run Snyk broker container on Fargate in private subnet
 * Run Snyk Container Registry Agent on Fargate in private subnet
 
+This demo automates all steps written in [Snyk documentation](https://docs.snyk.io/features/snyk-broker/snyk-broker-container-registry-agent/setting-up-the-container-registry-agent-for-a-brokered-ecr-integration).
+
 When terraform successfully provisions, you should have AWS infra as below.
 
 <img src="./asset/Brocker_private_ecr_demo.png">
