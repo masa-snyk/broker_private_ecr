@@ -1,3 +1,7 @@
+### -------------------------
+### Create ECS cluster
+### -------------------------
+
 module "ecs" {
   source  = "terraform-aws-modules/ecs/aws"
   version = "4.1.0"
@@ -118,7 +122,7 @@ resource "aws_ecs_task_definition" "broker_cra" {
 }
 
 ### --------------------------------------------------------------
-### Run Containers (ECS tasks are defined in broker_cra_agent.tf)
+### Crate ECS service to run Containers 
 ### --------------------------------------------------------------
 
 resource "aws_ecs_service" "broker_cra" {

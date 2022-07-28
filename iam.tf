@@ -1,5 +1,6 @@
 ### -----------------------------------------
 ### Policies
+### -----------------------------------------
 
 data "aws_iam_policy_document" "ecr_read_only" {
   statement {

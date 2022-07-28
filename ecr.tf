@@ -1,3 +1,7 @@
+### ------------------------------
+### Create ECR repo
+### ------------------------------
+
 resource "aws_ecr_repository" "repo" {
   name                 = "${var.prefix}-ecr-demo"
   image_tag_mutability = "MUTABLE"
@@ -8,7 +12,12 @@ resource "aws_ecr_repository" "repo" {
   force_delete = true
 }
 
-# Push sample container image
+### -------------------------------------------
+### Push sample container image
+###  - This runs in local machine environment.
+###  - Therefore, this demo won't work in TFC
+### --------------------------------------------
+
 resource "null_resource" "frontend" {
   triggers = {
     file_content_md5 = md5(file("${path.module}/dockerbuild.sh"))
