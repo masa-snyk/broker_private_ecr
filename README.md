@@ -67,7 +67,7 @@ Rename `terraform.tfvars.example` to `terraform.tfvars`.
 mv terraform.tfvars.example terraform.tfvars
 ```
 
-Modiry the contents
+Modify the contents
 
 ```
 prefix       = "<replace this with your name>"
@@ -87,13 +87,26 @@ terraform plan
 terraform apply -auto-apply
 ```
 
-### That's it
+### Confirm the integration works
 
 Now you should have your infrastructure on AWS with ECR, ECS, Broker, agent all set up.
 
 If you go to Snyk's integration page, you should now see the your private private ECR Repo.
 
 <img src="./asset/ecr_integration.png">
+
+Now ECR, broker, CRA are all set up.  
+Push your favorite container images, and start scanning!
+https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html
+
+## When you are done working on it
+
+**Don't forget to destroy all of your infrastructure.**
+If you leave it, it will cost you (like running water all the time).
+
+```
+terraform destroy -auto-approve
+```
 
 ## Debug
 
