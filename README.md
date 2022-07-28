@@ -119,17 +119,17 @@ terraform destroy -auto-approve
   * Session manager plugin
     * https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html#install-plugin-macos
 
- #### To login in to **Broker** container
+ ### To login in to a Broker container
 
-    ```
-    ./debug/debug_login_into_broker.sh broker
-    ```
+```
+./debug/debug_login_into_broker.sh broker
+```
 
-#### To login in to **CRA** container
+### To login in to a CRA container
 
-    ```
-    ./debug/debug_login_into_broker.sh cra
-    ```
+```
+./debug/debug_login_into_broker.sh cra
+```
 
 ## Action Items
 
