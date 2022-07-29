@@ -33,4 +33,6 @@ resource "null_resource" "frontend" {
       CONTAINER_NAME = "${var.prefix}-hello-world"
     }
   }
+
+  depends_on = [aws_ecr_repository.repo]
 }
